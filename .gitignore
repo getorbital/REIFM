@@ -1,0 +1,13 @@
+data/
+vendor/
+.venv/
+__pycache__/
+*.pt
+checkpoints/*/
+!checkpoints/README.md
+results/eval_logs/
+results/*.log
+wandb/
+reifm_sampler/target/
+figures/*.png
+.DS_Store

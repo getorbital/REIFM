@@ -1,0 +1,43 @@
+{
+ "frozen": {
+  "accum_steps": 1,
+  "agg": "sum",
+  "batches_per_epoch": null,
+  "bs": 16,
+  "cosine": true,
+  "dim": 64,
+  "dropout": 0.2,
+  "edge_dropout": 0.0,
+  "epochs": 20,
+  "eval": [
+   "FB15k237Inductive:v1"
+  ],
+  "eval_bs": 16,
+  "fanout": 15,
+  "grad_ckpt": false,
+  "grad_clip": 0.0,
+  "layers": 12,
+  "lr": 0.0005,
+  "max_train_secs": 1800.0,
+  "no_train_valid": false,
+  "num_hops": 4,
+  "num_workers": 0,
+  "pos_mask": true,
+  "qc_complex": false,
+  "qc_readout": false,
+  "sampled": false,
+  "select_eval": [
+   "FB15k237Inductive:v1"
+  ],
+  "train": [
+   "FB15k237Inductive:v1"
+  ],
+  "valid_every": 1,
+  "valid_queries": 1000,
+  "wd": 0.01
+ },
+ "varying": [
+  "backbone",
+  "seed"
+ ]
+}

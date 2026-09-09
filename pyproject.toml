@@ -1,0 +1,30 @@
+[project]
+name = "reifm"
+version = "1.0.0"
+description = "Reification as a transferable vocabulary: zero-shot link prediction with vanilla GNNs"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Camille Pradel", email = "camille@itmatr.tech" }]
+requires-python = ">=3.13"
+dependencies = [
+    "easydict>=1.13",
+    "jinja2>=3.1.6",
+    "ninja>=1.13.0",
+    "numpy==2.4.6",
+    "pyyaml>=6.0.3",
+    "relbench==2.1.2",
+    "torch==2.12.0",
+    "torch-geometric==2.8.0",
+    "tqdm>=4.68.2",
+    "wandb>=0.18.0",
+]
+
+[project.urls]
+Repository = "https://github.com/getorbital/REIFM"
+
+[tool.setuptools]
+packages = ["reifm"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,14 @@
+[package]
+name = "reifm_sampler"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "reifm_sampler"
+crate-type = ["cdylib"]
+
+[dependencies]
+pyo3 = { version = "0.22", features = ["extension-module"] }
+rand = "0.8"
+rand_pcg = "0.3"
+once_cell = "1"
