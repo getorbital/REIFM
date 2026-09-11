@@ -3,7 +3,7 @@
 Code, checkpoints and evaluation pipeline for the paper
 
 > **Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs**
-> Camille Pradel (Matr), 2026. arXiv: *link to come*.
+> Camille Pradel (Matr), 2026. arXiv: [2609.11347](https://arxiv.org/abs/2609.11347).
 
 The paper shows that five unmodified textbook GNNs (GAT, GINE with sum and with
 mean+max aggregation, GraphSAGE, R-GCN), trained for 30 minutes on one small
@@ -116,10 +116,13 @@ the regime labels used in the tables.
 
 ```bibtex
 @misc{pradel2026reification,
-  title  = {Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs},
-  author = {Camille Pradel},
-  year   = {2026},
-  note   = {arXiv preprint, link to come}
+  title         = {Reification as a Transferable Vocabulary: Zero-Shot Link Prediction with Vanilla GNNs},
+  author        = {Camille Pradel},
+  year          = {2026},
+  eprint        = {2609.11347},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2609.11347}
 }
 ```
 

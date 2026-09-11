@@ -7,13 +7,15 @@ tags:
   - zero-shot
   - graph-neural-network
   - reification
+  - arxiv:2609.11347
 ---
 
 # REIFM checkpoints — Reification as a Transferable Vocabulary
 
 Checkpoints of the paper **Reification as a Transferable Vocabulary: Zero-Shot
-Link Prediction with Vanilla GNNs** (Camille Pradel, Matr, 2026; arXiv link to
-come). Code and evaluation pipeline: https://github.com/getorbital/REIFM.
+Link Prediction with Vanilla GNNs** (Camille Pradel, Matr, 2026; arXiv:2609.11347,
+https://arxiv.org/abs/2609.11347). Code and evaluation pipeline:
+https://github.com/getorbital/REIFM.
 
 All models read *reified* graphs (every fact is a node linked to its subject,
 object and relation-type node through six meta-relations; relation types are
