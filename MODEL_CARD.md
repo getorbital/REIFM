@@ -49,7 +49,9 @@ rejected or replaced. Only `backbone` and `seed` differ across the 15 runs
 
 ## Expected numbers
 
-Filtered MRR, zero-shot, mean over the 3 seeds (paper Table 2):
+Filtered MRR, zero-shot, mean over the 3 seeds (paper Table 2, as corrected in
+v1.0.1: the test graphs of eight benchmarks were rebuilt, see "Correction" in the
+repository README; the checkpoints are unchanged):
 
 | model | inductive-(e) (12) | inductive-(e,r) (13) | extended (15) | all 40 |
 |---|---|---|---|---|
