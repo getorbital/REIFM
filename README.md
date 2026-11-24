@@ -100,8 +100,23 @@ minutes.
 compares them with the frozen CSV at the pre-registered tolerance of 0.005 MRR:
 GPU evaluation is not deterministic on the two smallest splits (NELL-995-v1,
 NL-InGram-0), where re-running the same checkpoint moves the MRR by up to
-±0.006; on an A100 the check reproduces 44 of the 75 cells exactly and all
-but one within 0.005.
+±0.006. With v1.0.0, on an A100, the check reproduced 44 of the 75 cells
+exactly and all but one within 0.005; it has not been re-run in full since the
+correction below, which changed the 15 NL-InGram-0 reference cells.
+
+### Correction (v1.0.1)
+
+v1.0.0 built the test graph of eight benchmarks (WK-InGram-100, FB-InGram-100,
+NL-InGram-0, NL-InGram-100, ILPC2022-small, ILPC2022-large, WikiTopics MT1:tax
+and MT4:health) with part of their inverse edges counted as facts
+(`reifm/datasets.py::strip_inverse_facts`). No test triple was involved and the
+training graph was unaffected, so the checkpoints are unchanged. The loader is
+fixed, the 15 models and the CoDEx-Small models were re-evaluated on the eight
+benchmarks from the same checkpoints, and the frozen CSVs in `results/` carry
+the corrected cells (`source = corrected`). Individual cells move by up to
+0.081 MRR; the 40-benchmark mean of the GAT moves from 0.3565 to 0.3564. The
+CSVs of v1.0.0 are kept in `results/v1/`, and `REIFM_LEGACY_STRIP=1` restores
+the previous loader to reproduce them. Details: Appendix B.9 of the paper (v2).
 
 ### Protocol in one paragraph
 

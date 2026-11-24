@@ -93,5 +93,15 @@ def strip_inverse_facts(data, num_relations_with_inv: int):
     relation id r+R. Keep only the originals (r < R) for reification, where
     direction is encoded structurally via HAS_SUBJECT/HAS_OBJECT."""
     R = num_relations_with_inv // 2
+    # `num_relations_with_inv` is the relation count of the DATASET (the maximum over its
+    # graphs), whereas each graph numbers its inverse relations from ITS OWN count
+    # (`data.num_relations`). On inference graphs with fewer relations than the dataset
+    # (InGram 100 splits, NL-InGram-0, ILPC2022, two WikiTopics splits), cutting at the
+    # dataset count let inverse edges through as facts. Fixed in v1.0.1 (see README,
+    # "Correction"). REIFM_LEGACY_STRIP=1 restores the v1.0.0 behaviour, to reproduce
+    # the cells of results/v1/.
+    nr = getattr(data, "num_relations", None)
+    if nr is not None and os.environ.get("REIFM_LEGACY_STRIP") != "1":
+        R = int(nr) // 2
     mask = data.edge_type < R
     return data.edge_index[:, mask], data.edge_type[mask], R

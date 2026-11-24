@@ -53,11 +53,11 @@ Filtered MRR, zero-shot, mean over the 3 seeds (paper Table 2):
 
 | model | inductive-(e) (12) | inductive-(e,r) (13) | extended (15) | all 40 |
 |---|---|---|---|---|
-| GAT | 0.5457 | 0.3300 | 0.2281 | 0.3565 |
-| GINE (mean+max) | 0.5276 | 0.3148 | 0.1807 | 0.3284 |
-| GINE (sum) | 0.5069 | 0.2918 | 0.1987 | 0.3214 |
-| GraphSAGE | 0.4676 | 0.2801 | 0.1625 | 0.2923 |
-| R-GCN | 0.4344 | 0.2005 | 0.1055 | 0.2350 |
+| GAT | 0.5457 | 0.3316 | 0.2264 | 0.3564 |
+| GINE (mean+max) | 0.5276 | 0.3161 | 0.1810 | 0.3288 |
+| GINE (sum) | 0.5069 | 0.2980 | 0.1998 | 0.3238 |
+| GraphSAGE | 0.4676 | 0.2832 | 0.1622 | 0.2932 |
+| R-GCN | 0.4344 | 0.2071 | 0.1067 | 0.2376 |
 | ULTRA-3g (local re-run, reference) | 0.5224 | 0.3446 | 0.2786 | 0.3732 |
 
 Per-seed and per-split values: `results/broad_eval_matrix.csv` in the code
