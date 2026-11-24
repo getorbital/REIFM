@@ -100,9 +100,9 @@ minutes.
 compares them with the frozen CSV at the pre-registered tolerance of 0.005 MRR:
 GPU evaluation is not deterministic on the two smallest splits (NELL-995-v1,
 NL-InGram-0), where re-running the same checkpoint moves the MRR by up to
-±0.006. With v1.0.0, on an A100, the check reproduced 44 of the 75 cells
-exactly and all but one within 0.005; it has not been re-run in full since the
-correction below, which changed the 15 NL-InGram-0 reference cells.
+±0.006; on an A100, from a fresh clone of v1.0.1, the check reproduces 42 of
+the 75 cells exactly, 61 within 0.001 and all but one within 0.005 (one
+NELL-995-v1 cell at 0.0055, so the script reports a failure for that cell).
 
 ### Correction (v1.0.1)
 
